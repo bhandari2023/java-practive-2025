@@ -1,12 +1,12 @@
-// function reverseArray(arr) {
-//     let result = [];
-//     for (let i = arr.length - 1; i >= 0; i--) {
-//       result.push(arr[i]);
-//     }
-//     return result;
-//   }
+function reverseArray(arr) {
+    let result = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+      result.push(arr[i]);
+    }
+    return result;
+  }
   
-//   console.log(reverseArray([1, 2, 3, 4, 5]));
+  console.log(reverseArray([1, 2, 3, 4, 5]));
 
 
  function sumOfTwoNumbers(a, b) {
@@ -74,3 +74,30 @@ function primeNumInRange(start, end){
 }
 console.log(primeNumInRange(1, 10)); // Output: [2, 3, 5, 7]
 console.log(primeNumInRange(10, 99)); // Output: [11, 13, 17, 19]
+
+
+function findMax(arr){
+    let max= arr[0];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]>max){
+            max = arr[i]
+        }
+    }
+    return max;         
+}
+
+console.log(findMax([1,2,3,4,5])); // Output: 5
+console.log(findMax([10,20,30,40,50])); // Output: 50   
+
+function removeDuplicates(arr){
+    let uniqueArray = [];
+    for(let i=0;i<arr.length; i++){
+        if(uniqueArray.indexOf(arr[i]) === -1){
+            uniqueArray.push(arr[i])
+        }                                   
+    }           
+    return uniqueArray; 
+}
+
+console.log(removeDuplicates([1,2,3,4,5,1,2,3])); // Output: [1, 2, 3, 4, 5]
+console.log(removeDuplicates([10,20,30,40,50,10,20])); // Output: [10, 20, 30, 40, 50]
