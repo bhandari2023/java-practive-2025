@@ -101,3 +101,26 @@ function removeDuplicates(arr){
 
 console.log(removeDuplicates([1,2,3,4,5,1,2,3])); // Output: [1, 2, 3, 4, 5]
 console.log(removeDuplicates([10,20,30,40,50,10,20])); // Output: [10, 20, 30, 40, 50]
+
+
+function reverseArray(arr){
+    let reversedArray = [];
+    for(let i=arr.length-1; i>=0; i--){
+        reversedArray.push(arr[i])
+    }
+    return reversedArray;
+}
+console.log(reverseArray([1,2,3,4,5])); 
+
+function palindrome(str){
+    let reversedstr = str.split("").reverse().join("");
+    if(str === reversedstr){
+        return true;                            
+
+}       
+else{
+        return false;
+    }
+}           
+console.log(palindrome("madam")); // Output: true
+console.log(palindrome("hello")); // Output: false
